@@ -1,0 +1,58 @@
+[
+  {
+    "id": "livestream-training",
+    "title": "Livestream Commerce Lab",
+    "date": "2025-11-12",
+    "category": "Livestream & Social",
+    "location": "Chi nhánh Lê Trọng Tấn",
+    "image": "/assets/activities/livestream-training.png",
+    "summary": "Buổi thực hành xây dựng kịch bản live, điều phối host, setup ánh sáng và đo hiệu suất tương tác theo từng phiên.",
+    "highlights": [
+      "Chuẩn hóa run of show cho TikTok Shop",
+      "Thử nghiệm kịch bản chốt đơn trong 30 phút",
+      "Tổng hợp chỉ số retention và bình luận sau phiên"
+    ]
+  },
+  {
+    "id": "ecommerce-ops-day",
+    "title": "E-commerce Operations Day",
+    "date": "2025-11-18",
+    "category": "E-commerce",
+    "location": "Chi nhánh Tôn Thất Tùng",
+    "image": "/assets/activities/ecommerce-ops.png",
+    "summary": "Ngày tối ưu quy trình listing, research sản phẩm, chuẩn bị đơn và checklist vận hành cho Shopify, Etsy, TikTok Shop.",
+    "highlights": [
+      "Cập nhật template listing cho nhiều kênh",
+      "Rà soát luồng xử lý đơn hàng và phản hồi khách",
+      "Tách bộ tiêu chí chọn sản phẩm thử nghiệm"
+    ]
+  },
+  {
+    "id": "automation-ai-workshop",
+    "title": "Automation & AI Workshop",
+    "date": "2025-11-25",
+    "category": "Kĩ thuật",
+    "location": "Chi nhánh Lê Trọng Tấn",
+    "image": "/assets/activities/automation-ai.png",
+    "summary": "Workshop nội bộ về cách biến thao tác lặp lại thành workflow tự động, kết hợp dashboard, phân quyền và trợ lý AI.",
+    "highlights": [
+      "Xác định các bước có thể tự động hóa trong vận hành MMO",
+      "Thiết kế dashboard theo nhu cầu từng phòng ban",
+      "Đưa AI vào phân loại nội dung và cảnh báo dữ liệu"
+    ]
+  },
+  {
+    "id": "sonic-kickoff",
+    "title": "Sonic Group Kickoff",
+    "date": "2025-10-20",
+    "category": "Văn hóa công ty",
+    "location": "Hai chi nhánh TP. Hồ Chí Minh",
+    "image": "/assets/sonic-hero.png",
+    "summary": "Ngày khởi động công ty, thống nhất định hướng media, MMO, thương mại điện tử, affiliate và phát triển tool automation.",
+    "highlights": [
+      "Công bố cơ cấu ban điều hành và 7 trưởng phòng",
+      "Chia nhóm mục tiêu theo media, commerce, sales và kỹ thuật",
+      "Thống nhất lịch làm việc 8:00 - 17:30 từ thứ 2 đến thứ 7"
+    ]
+  }
+]
