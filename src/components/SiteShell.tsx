@@ -37,30 +37,39 @@ export function SiteShell({ children, hash }: SiteShellProps) {
             <span className="text-sm font-semibold text-slate-950">{company.name}</span>
           </a>
 
-          <nav className="hidden items-center gap-1 md:flex" aria-label="Điều hướng chính">
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              const active =
-                item.page === "people"
-                  ? hash.startsWith("#/nhan-su")
-                  : isActiveRoute(hash, item.page);
+          <div className="hidden items-center gap-2 md:flex">
+            <nav className="flex items-center gap-1" aria-label="Điều hướng chính">
+              {navigation.map((item) => {
+                const Icon = item.icon;
+                const active =
+                  item.page === "people"
+                    ? hash.startsWith("#/nhan-su")
+                    : isActiveRoute(hash, item.page);
 
-              return (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className={`inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold transition ${
-                    active
-                      ? "bg-slate-950 text-white"
-                      : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
-                  }`}
-                >
-                  <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-                  {item.label}
-                </a>
-              );
-            })}
-          </nav>
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className={`inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold transition ${
+                      active
+                        ? "bg-slate-950 text-white"
+                        : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
+                    }`}
+                  >
+                    <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+                    {item.label}
+                  </a>
+                );
+              })}
+            </nav>
+            <a
+              href={routes.people}
+              className="inline-flex h-8 items-center gap-1.5 rounded-full bg-teal-600 px-3 text-xs font-semibold text-white transition hover:bg-teal-700"
+            >
+              <Users className="h-3.5 w-3.5" aria-hidden="true" />
+              Xem đội ngũ
+            </a>
+          </div>
 
           <button
             type="button"
@@ -89,6 +98,13 @@ export function SiteShell({ children, hash }: SiteShellProps) {
                   </a>
                 );
               })}
+              <a
+                href={routes.people}
+                className="inline-flex h-9 items-center gap-2 rounded-full bg-teal-600 px-3 text-xs font-semibold text-white"
+              >
+                <Users className="h-3.5 w-3.5" aria-hidden="true" />
+                Xem đội ngũ
+              </a>
             </nav>
           </div>
         ) : null}
@@ -97,7 +113,7 @@ export function SiteShell({ children, hash }: SiteShellProps) {
       <main>{children}</main>
 
       <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
           <div>
             <div className="flex items-center gap-2">
               <span className="grid h-8 w-8 place-items-center rounded-full bg-slate-950 text-xs font-bold text-white">
@@ -109,6 +125,22 @@ export function SiteShell({ children, hash }: SiteShellProps) {
               Công ty truyền thông, MMO, thương mại điện tử, livestream, affiliate,
               banking support và phát triển automation/AI tại TP. Hồ Chí Minh.
             </p>
+            <div className="mt-5 grid gap-2 text-sm text-slate-600">
+              {company.branches.map((branch) => (
+                <p key={branch.name}>
+                  <span className="font-semibold text-slate-950">{branch.name}:</span>{" "}
+                  {branch.address}
+                </p>
+              ))}
+              <p>
+                <span className="font-semibold text-slate-950">Email:</span>{" "}
+                hello@sonicgroup.vn
+              </p>
+              <p>
+                <span className="font-semibold text-slate-950">Giờ làm việc:</span>{" "}
+                {company.openingHours}
+              </p>
+            </div>
           </div>
           <div className="flex flex-wrap items-start justify-start gap-2 lg:justify-end">
             {socials.map((social) => {

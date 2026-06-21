@@ -3,7 +3,7 @@ import { SiteShell } from "./components/SiteShell";
 import { parseHash } from "./lib/router";
 import { ActivitiesPage } from "./pages/ActivitiesPage";
 import { EmployeeDetailPage } from "./pages/EmployeeDetailPage";
-import { HomePage } from "./pages/HomePage";
+import { HomePageEnhanced } from "./pages/HomePageEnhanced";
 import { PeoplePage } from "./pages/PeoplePage";
 import type { RouteState } from "./types";
 
@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <SiteShell hash={hash}>
-      {route.page === "home" ? <HomePage /> : null}
+      {route.page === "home" ? <HomePageEnhanced /> : null}
       {route.page === "people" ? <PeoplePage /> : null}
       {route.page === "employee" ? (
         <EmployeeDetailPage employeeId={route.employeeId} />
